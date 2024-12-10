@@ -1030,7 +1030,7 @@ int nRF24L01P::getStatusRegister(void) {
 
 void nRF24L01P::enableAutoRetransmit(int delay, int count) {
     if(delay < 250 || delay > 4000) {
-        printf("Error: delay must be between 250 and 4000 ms");
+        printf("Error: delay must be between 250 and 4000 us");
     } else if(count < 0 || count > 16) {
         printf("Error: retransmit count must be between 0 and 15");
     } else {
